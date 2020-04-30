@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="contact">
+        <h2 class="title">Contact</h2>
+
+        <!-- フォーム全体をformタグで囲む 
+        action属性にはファイルの送信先を記述する
+        method属性にはGETやPOSTを記入する-->
+        <form action="#" method="POST">
+            <dl>
+                <!-- 1行入力の場合はinput.textを使用 -->
+                <dt>お名前</dt>
+                <dd><input type="text" name="name"></dd>
+
+                <!-- 1行入力の中でもe-mailの記入の場合はinput.e-mailを使用 -->
+                <dt>メールアドレス</dt>
+                <dd><input type="email" name="email" id=""></dd>
+
+                <!-- 複数の選択肢をクリックすることで選択させる場合はinput.radioを使用 -->
+                <dt>お問い合わせ内容</dt>
+                <dd>
+                    <!-- 選択をする際の反応領域を拡大する場合はlabelタグを使用する -->
+                    <label for="making"><input type="radio" name="kind" id="making" value="制作のご依頼">制作のご依頼</label>
+                    <label for="event"><input type="radio" name="kind" id="event" value="イベント出演依頼">イベント出演依頼</label>
+                    <label for="other"><input type="radio" name="kind" id="other" value="その他">その他</label>
+                </dd>
+
+                <!-- 複数行の記入欄を用意する場合はtextareaを使用 -->
+                <dt>お問い合わせ詳細</dt>
+                <dd>
+                    <textarea name="detail" id="" cols="30" rows="10"></textarea>
+                </dd>
+
+            </dl>
+        </form>
+        <input type="submit" value="送信">
+    </section>
+
+    <footer>
+        <small>All Rights Reserved 2020</small>
+    </footer>
+    
+</body>
+</html>
